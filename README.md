@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## name of project
 ### Code Badges
 build status icon
@@ -40,3 +41,9 @@ $ npm test
 ### License
 [MIT](LICENSE)
 
+=======
+facebook
+========
+[![Build Status](https://travis-ci.org/jessicafraines/facebook.svg)](https://travis-ci.org/jessicafraines/facebook)
+[![Coverage Status](https://coveralls.io/repos/jessicafraines/facebook/badge.png)](https://coveralls.io/r/jessicafraines/facebook)
+>>>>>>> 074bb5282261301fc55881e5afc2f481da89ab28

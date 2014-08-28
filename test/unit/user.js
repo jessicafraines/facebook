@@ -28,5 +28,41 @@ describe('User', function(){
       expect(u).to.be.instanceof(User);
     });
   });
-});
+
+  describe('#save', function(){
+    it('should save a user', function(){
+      var u = new User(),
+          o = {x:3, visible:'public', foo:'bar'};
+
+      u.baz = 'bim';
+      u.save(o, function(err, user){
+        expect(user.isVisible).to.be.true;
+        expect(user.foo).to.equal('bar');
+        expect(user.baz).to.equal('bim');
+      });
+    });
+  });
+
+  describe('.find', function(){
+    it('should find users who are public', function(){
+      User.find({isVisible:true}, function(err, users){
+        expect(users).to.have.length(2);
+      });
+    });
+  });
+  describe('#send', function(){
+    it('should send a text message to a user', function(done){
+      User.findById('000000000000000000000001', function(err, sender){
+        User.findById('000000000000000000000002', function(err, receiver){
+          sender.send(receiver, {mtype:'text', message:'yo'}, function(err, response){
+            expect(response.sid).to.be.ok;
+            done();
+          });
+        });
+      });
+    });
+  });
+});//final closing
+
+
 
