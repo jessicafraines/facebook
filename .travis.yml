@@ -11,4 +11,10 @@ script:
   - npm test
 after_script:
   - npm run coveralls
+env:
+  global:
+    - DEBUG=1
+    - secure: "KjR2I2wpExBw8jdihWD7AzCxbXAH1Bi1Cevzv8ccia91c4VaYNZ4n5yJdyzsKm6RAnk4+8YhET+pvDgAoAdiCtFkNOiG4D/yQzkWuR22GiNPe/oX84N4SefRSy/llflVlcx+ON7m0CG+oc5gvHUcw7ocXZsmekTQQKf4UGR6/rc="
+    - secure: "J4iOZ9XvJRV0StHTiZh1AMUYY8u1Pm/9SArKYenDzbIRRnXn+9PmXg9f+87cSmRePqGEO2mIei1A5xnPTwTitmh4iQDL4oy+ma1ls1REbQfH09MSzWYAwxDjY2kE+S82y3RldoW8+wFphGwR2cGIl1HYPBHEh1XHxK7Ygr/b+qM="
+    - secure: "G6KTXJQLhbI89evJ4Sjq6mhHNfO4m/B0PDuOrCmkkOS9ilDqEQno59+q0iSCLRK0d05K+SVXCXlJMU95N3wmvMIihYYMw59bcR3JrHysjb8N2Sn2/KbtJ27WwPBWdU8m8y+0s50i8hB7d02PxMgaOsQyIH5j99zC0f0tKERp/bQ="
 
